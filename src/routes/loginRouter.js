@@ -9,7 +9,7 @@ import {
   getPersona,
   updatePersona,
   loginPersona,
-  verificarPersonaExistente,
+  // verificarPersonaExistente,
 } from "../controllers/loginController.js";
 const router = Router();
 
@@ -28,7 +28,7 @@ router.patch("/persona/:id", updatePersona);
 router.delete("/persona/:id", deletePersona);
 
 //Post del regisgtro
-router.post("/persona", verificarPersonaExistente, registroPersona);
+router.post("/persona", registroPersona);
 //Post del login
 router.post("/login", loginPersona);
 

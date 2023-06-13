@@ -4,24 +4,24 @@ import { persona } from "../models/personaModel.js";
 import jwt from "jsonwebtoken";
 import bcryptjs from "bcryptjs";
 //Funcion para le verificacion si el aprendiz esta ya registrado
-export async function verificarPersonaExistente(req, res, next) {
-  try {
-    const { n_documento } = req.body;
-//Promesa para buscar el numero de documento de la persona
-    const personasExistentes = await persona.findAll({
-      where: { n_documento }
-    });
-//Comparacion para saber si la persona ya esta registrada
-    if (personasExistentes.length > 0) {
-      return res.status(409).json({ error: 'La persona ya está registrada en la base de datos' });
-    }
-    // Si la persona no existe, continúa con la siguiente función de middleware
-    next();
-  } catch (error) {//Error de conflicto
-    console.error(error);
-    res.status(500).json({ error: 'Error en el servidor' });
-  }
-}
+// export async function verificarPersonaExistente(req, res, next) {
+//   try {
+//     const { n_documento } = req.body;
+// //Promesa para buscar el numero de documento de la persona
+//     const personasExistentes = await persona.findAll({
+//       where: { n_documento }
+//     });
+// //Comparacion para saber si la persona ya esta registrada
+//     if (personasExistentes.length > 0) {
+//       return res.status(409).json({ error: 'La persona ya está registrada en la base de datos' });
+//     }
+//     // Si la persona no existe, continúa con la siguiente función de middleware
+//     next();
+//   } catch (error) {//Error de conflicto
+//     console.error(error);
+//     res.status(500).json({ error: 'Error en el servidor' });
+//   }
+// }
 
 
 //fUNCION PARA TRAER TODAS LOS APRENDICES DE LA DB

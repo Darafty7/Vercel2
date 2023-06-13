@@ -2,10 +2,10 @@ import { Router } from "express";
 //impost de multer para subir img
 import multer from 'multer';
 //Importa el controlador aprendizController
-import {  crearImagen, verimg, deleteimg, idimg } from "../controllers/eventosController.js";
+import { crearImagen, verimg, deleteimg, idimg } from "../controllers/eventosController.js";
 const router = Router()
 //esta funcion nos ayuda ala creacionde una nueva carpeta y para poder guardar la img
-const storage = multer({ dest: '/public' });
+const storage = multer({ dest: 'src/public' });
 
 
 //rutas de eventos

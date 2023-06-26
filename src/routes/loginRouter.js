@@ -22,7 +22,7 @@ router.use(function (req, res, next) {
 });
 
 //Peticiones tanto del login y registro.
-router.get("/persona", getPersona);
+router.get("/", getPersona);
 router.get("/persona/:id", getIdpersona);
 router.patch("/persona/:id", updatePersona);
 router.delete("/persona/:id", deletePersona);

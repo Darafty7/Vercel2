@@ -3,11 +3,11 @@ import app from './app.js';
 //IMPORTAMOS LA INSTANCIA DE SEQUELIZE
 import { sequelize } from './database/database.js';
 //Importar los Modulos creados para visualizar las tablas a la fuerza
-import './models/personaModel.js';
-import './models/juegosModel.js';
-import './models/eventoModel.js';
-import './models/comentariosModel.js';
-import './models/citasModel.js';
+// import './models/personaModel.js';
+// import './models/juegosModel.js';
+// import './models/eventoModel.js';
+// import './models/comentariosModel.js';
+// import './models/citasModel.js';
 //SERVIDOR BASICO QUE ESTA ESCUCHANDO EN EL PUERTO 4000
 async function main() {
     try {
